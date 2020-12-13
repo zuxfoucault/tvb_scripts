@@ -57,17 +57,22 @@ git clone --depth 1 https://github.com/$USER_GIT/tvb-root.git
 #git fetch --all
 
 pushd tvb-root
-$CONDA_ENV/tvb-run/bin/python framework_tvb/setup.py develop --no-deps
-$CONDA_ENV/tvb-run/bin/python scientific_library/setup.py develop
-$CONDA_ENV/tvb-run/bin/python tvb_contrib/setup.py develop --no-deps
-$CONDA_ENV/tvb-run/bin/python tvb_bin/setup.py develop
-$CONDA_ENV/tvb-run/bin/python tvb_build/setup.py develop --no-deps
-
-$CONDA_ENV/tvb-docs/bin/python framework_tvb/setup.py develop --no-deps
-$CONDA_ENV/tvb-docs/bin/python scientific_library/setup.py develop
-$CONDA_ENV/tvb-docs/bin/python tvb_contrib/setup.py develop --no-deps
-$CONDA_ENV/tvb-docs/bin/python tvb_bin/setup.py develop
-$CONDA_ENV/tvb-docs/bin/python tvb_build/setup.py develop --no-deps
+cd framework_tvb
+$CONDA_ENV/tvb-run/bin/python setup.py develop --no-deps
+$CONDA_ENV/tvb-docs/bin/python setup.py develop --no-deps
+cd ../scientific_library
+$CONDA_ENV/tvb-run/bin/python setup.py develop
+$CONDA_ENV/tvb-docs/bin/python setup.py develop
+cd ../tvb_contrib
+$CONDA_ENV/tvb-run/bin/python setup.py develop --no-deps
+$CONDA_ENV/tvb-docs/bin/python setup.py develop --no-deps
+cd ../tvb_bin
+$CONDA_ENV/tvb-run/bin/python setup.py develop
+$CONDA_ENV/tvb-docs/bin/python setup.py develop
+cd ../tvb_build
+$CONDA_ENV/tvb-run/bin/python setup.py develop --no-deps
+$CONDA_ENV/tvb-docs/bin/python setup.py develop --no-deps
+cd ..
 
 # customize .tvb.configuration after copy
 #cp tvb_buil/docker/.tvb.configuration $USER_SYSTEM_HOME/.tvb.configuration
