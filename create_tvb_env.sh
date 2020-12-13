@@ -20,7 +20,7 @@ conda install -y --name tvb-docs pytest pytest-cov pytest-benchmark pytest-mock 
 conda install -y --name tvb-docs psycopg2 pytables scikit-image==0.14.2 simplejson cherrypy docutils werkzeug==0.16.1
 conda install -y --name tvb-docs -c conda-forge jupyterlab flask gevent
 $CONDA_ENV/tvb-docs/bin/pip install --upgrade pip
- Latest functioning pair compatible tested for sqlalchemy==1.3.20 sqlalchemy-migrate==0.13.0
+# Latest functioning pair compatible tested for sqlalchemy==1.3.20 sqlalchemy-migrate==0.13.0
 $CONDA_ENV/tvb-docs/bin/pip install h5py formencode cfflib jinja2 nibabel sqlalchemy sqlalchemy-migrate allensdk
 $CONDA_ENV/tvb-docs/bin/pip install tvb-gdist typing BeautifulSoup4 subprocess32 flask-restplus python-keycloak mako pyAesCrypt pyunicore
 $CONDA_ENV/tvb-docs/bin/pip install sphinx==1.2.3 docutils==0.12
