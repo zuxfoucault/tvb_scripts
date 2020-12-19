@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 # Modified based on Dockerfile-build
 # conda env
+set -Eeuo pipefail
 
 # check environment variables
 #echo $HOME
