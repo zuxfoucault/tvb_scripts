@@ -3,6 +3,7 @@
 # conda env
 set -Eeuo pipefail
 
+
 # check environment variables
 #echo $HOME
 #echo $CONDA_PREFIX
